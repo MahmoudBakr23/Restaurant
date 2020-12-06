@@ -22,9 +22,9 @@ function navigation() {
     const navList = document.createElement('ul')
     navList.innerHTML = `
         <li id="home"><a href="#home">Home</a></li>
-        <li id="menu"><a href="menu">Menu</a></li>
-        <li id="about"><a href="about">About</a></li>
-        <li id="contact"><a href="contact">Contact</a></li>
+        <li id="menu"><a href="#menu">Menu</a></li>
+        <li id="about"><a href="#about">About</a></li>
+        <li id="contact"><a href="#contact">Contact</a></li>
     `
     mainDiv.appendChild(navList)
 }
@@ -39,7 +39,13 @@ function homePage() {
 function homeEventListeners() {
     const homeBtn = document.getElementById('home')
     homeBtn.addEventListener('click', () => {
-        home_page.classList.remove('blank')
+        home_page.classList.forEach((c) => {
+            if(c == 'blank') {
+                home_page.classList.remove('blank')
+            } else {
+                home_page.classList.add('blank')
+            }
+        })
     })
 }
 
@@ -53,13 +59,90 @@ function homeEventListeners() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
 console.log('Let us GO!');
 
 
-_home_js__WEBPACK_IMPORTED_MODULE_0__.navigation()
-_home_js__WEBPACK_IMPORTED_MODULE_0__.homePage()
-_home_js__WEBPACK_IMPORTED_MODULE_0__.homeEventListeners()
 
+_home_js__WEBPACK_IMPORTED_MODULE_0__.navigation()
+
+_home_js__WEBPACK_IMPORTED_MODULE_0__.homePage()
+_menu_js__WEBPACK_IMPORTED_MODULE_1__.menuPage()
+
+_home_js__WEBPACK_IMPORTED_MODULE_0__.homeEventListeners()
+_menu_js__WEBPACK_IMPORTED_MODULE_1__.menuEventListeners()
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "menuPage": () => /* binding */ menuPage,
+/* harmony export */   "menuEventListeners": () => /* binding */ menuEventListeners
+/* harmony export */ });
+const mainDiv = document.getElementById('content')
+const menu_page = document.createElement('div')
+menu_page.classList = "menu_page blank"
+
+function menuPage() {
+    const header = document.createElement('h1')
+    header.innerHTML = `<small>our</small> Menu!`
+    menu_page.appendChild(header)
+    
+
+    const menuBody = document.createElement('table')
+    menuBody.innerHTML = `
+        <tr>
+            <th>Sort</th>
+            <th>X Small</th>
+            <th>Small</th>
+            <th>Medium</th>
+            <th>Large</th>
+        </tr>
+        <tr>
+            <th>Family</th>
+            <td>$25</td>
+            <td>$35</td>
+            <td>$45</td>
+            <td>$55</td>
+        </tr>
+        <tr>
+            <th>Couples</th>
+            <td>$25</td>
+            <td>$35</td>
+            <td>$45</td>
+            <td>$55</td>
+        </tr>
+        <tr>
+            <th>VIP</th>
+            <td>$25</td>
+            <td>$35</td>
+            <td>$45</td>
+            <td>$55</td>
+        </tr>
+    `
+    menu_page.appendChild(menuBody)
+
+    mainDiv.appendChild(menu_page)
+}
+
+function menuEventListeners() {
+    const menuBtn = document.getElementById('menu')
+    menuBtn.addEventListener('click', () => {
+        menu_page.classList.forEach((c) => {
+            if(c == 'blank') {
+                menu_page.classList.remove('blank')
+            } else {
+                menu_page.classList.add('blank')
+            }
+        })
+    })
+}
 
 /***/ })
 

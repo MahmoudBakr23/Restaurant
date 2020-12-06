@@ -68,3 +68,26 @@ a:hover::before {
 .blank {
     display: none;
 }
+
+table {
+    color: #e0e0e0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #444;
+    padding: 2rem 1rem;
+}
+
+th {
+    color: goldenrod;
+    padding-bottom: 1rem;
+}
+
+td {
+    padding: 1rem;
+    border-left: 1px solid gold;
+}
+
+td:hover {
+    background-color: gray;
+    cursor: pointer;
+}
