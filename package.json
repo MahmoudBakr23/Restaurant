@@ -1,0 +1,24 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "A restaurant page built with js and webpack",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress",
+    "watch": "webpack --progress --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahmoudBakr23/Restaurant.git"
+  },
+  "author": "Mahmoud Bakr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MahmoudBakr23/Restaurant/issues"
+  },
+  "homepage": "https://github.com/MahmoudBakr23/Restaurant",
+  "devDependencies": {
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
