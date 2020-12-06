@@ -2,6 +2,53 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/about.js":
+/*!**********************!*
+  !*** ./src/about.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "aboutPage": () => /* binding */ aboutPage,
+/* harmony export */   "aboutEventListeners": () => /* binding */ aboutEventListeners
+/* harmony export */ });
+const mainDiv = document.getElementById('content')
+const about_page = document.createElement('div')
+about_page.classList = "about_page blank"
+
+function aboutPage() {
+    const header = document.createElement('h1')
+    header.innerHTML = `<small>our</small> Story!`
+    about_page.appendChild(header)
+
+    const aboutBody = document.createElement('p')
+    aboutBody.innerHTML = `
+        We're a group of lovely young people who are dedicated their lives to help other people, and this is our first project.
+        We thought of a restaurant because it's awesome when you bring people the food they like, and it's awesome to take their feedback about the food
+        you make, specially if it was a positive one. So! Give us your support by coming to visit our place, we can't wait to hear your opinion!
+        <span>♥</span>
+    `
+    about_page.appendChild(aboutBody)
+
+    mainDiv.appendChild(about_page)
+}
+
+function aboutEventListeners() {
+    const aboutBtn = document.getElementById('about')
+    aboutBtn.addEventListener('click', () => {
+        about_page.classList.forEach((c) => {
+            if(c == 'blank') {
+                about_page.classList.remove('blank')
+            } else {
+                about_page.classList.add('blank')
+            }
+        })
+    })
+}
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*
   !*** ./src/home.js ***!
@@ -60,7 +107,9 @@ function homeEventListeners() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
 /* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.js */ "./src/about.js");
 console.log('Let us GO!');
+
 
 
 
@@ -68,9 +117,11 @@ _home_js__WEBPACK_IMPORTED_MODULE_0__.navigation()
 
 _home_js__WEBPACK_IMPORTED_MODULE_0__.homePage()
 _menu_js__WEBPACK_IMPORTED_MODULE_1__.menuPage()
+_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutPage()
 
 _home_js__WEBPACK_IMPORTED_MODULE_0__.homeEventListeners()
 _menu_js__WEBPACK_IMPORTED_MODULE_1__.menuEventListeners()
+_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutEventListeners()
 
 /***/ }),
 

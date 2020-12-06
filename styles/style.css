@@ -91,3 +91,14 @@ td:hover {
     background-color: gray;
     cursor: pointer;
 }
+
+p {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    line-height: 30px;
+    font-weight: 100;
+}
+
+span {
+    color: goldenrod;
+}
