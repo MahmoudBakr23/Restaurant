@@ -1,11 +1,11 @@
+import * as varModule from './var';
+
 const mainDiv = document.getElementById('content');
-const menuSlate = document.createElement('div');
-menuSlate.classList = 'menuSlate blank';
 
 export function menuPage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>our</small> Menu!';
-	menuSlate.appendChild(header);
+	varModule.menuSlate.appendChild(header);
 
 
 	const menuBody = document.createElement('table');
@@ -39,21 +39,23 @@ export function menuPage() {
             <td>$55</td>
         </tr>
     `;
-	menuSlate.appendChild(menuBody);
+	varModule.menuSlate.appendChild(menuBody);
 
-	mainDiv.appendChild(menuSlate);
+	mainDiv.appendChild(varModule.menuSlate);
 }
 
 export function menuEventListeners() {
 	const menuBtn = document.getElementById('menu');
 	menuBtn.addEventListener('click', () => {
-		menuSlate.classList.forEach((c) => {
+		varModule.menuSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				menuSlate.classList.remove('blank');
+				varModule.menuSlate.classList.remove('blank');
+				varModule.aboutSlate.classList.add('blank');
+				varModule.contactSlate.classList.add('blank');
+				varModule.homeSlate.classList.add('blank');
 				menuBtn.classList.add('active');
 			} else {
-				menuSlate.classList.add('blank');
-				menuBtn.classList.remove('active');
+				varModule.menuSlate.classList.add('blank');
 			}
 		});
 	});

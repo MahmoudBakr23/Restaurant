@@ -1,11 +1,12 @@
+import * as varModule from './var';
+
 const mainDiv = document.getElementById('content');
-const aboutSlate = document.createElement('div');
-aboutSlate.classList = 'aboutSlate blank';
+
 
 export function aboutPage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>our</small> Story!';
-	aboutSlate.appendChild(header);
+	varModule.aboutSlate.appendChild(header);
 
 	const aboutBody = document.createElement('p');
 	aboutBody.innerHTML = `
@@ -14,21 +15,23 @@ export function aboutPage() {
         you make, specially if it was a positive one. So! Give us your support by coming to visit our place, we can't wait to hear your opinion!
         <span>♥</span>
     `;
-	aboutSlate.appendChild(aboutBody);
+	varModule.aboutSlate.appendChild(aboutBody);
 
-	mainDiv.appendChild(aboutSlate);
+	mainDiv.appendChild(varModule.aboutSlate);
 }
 
 export function aboutEventListeners() {
 	const aboutBtn = document.getElementById('about');
 	aboutBtn.addEventListener('click', () => {
-		aboutSlate.classList.forEach((c) => {
+		varModule.aboutSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				aboutSlate.classList.remove('blank');
+				varModule.aboutSlate.classList.remove('blank');
+				varModule.contactSlate.classList.add('blank');
+				varModule.menuSlate.classList.add('blank');
+				varModule.homeSlate.classList.add('blank');
 				aboutBtn.classList.add('active');
 			} else {
-				aboutSlate.classList.add('blank');
-				aboutBtn.classList.remove('active');
+				varModule.aboutSlate.classList.add('blank');
 			}
 		});
 	});

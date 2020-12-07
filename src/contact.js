@@ -1,6 +1,7 @@
+import * as varModule from './var';
+
 const mainDiv = document.getElementById('content');
-const contactSlate = document.createElement('div');
-contactSlate.classList = 'contactSlate blank';
+
 
 export function contactPage() {
 	const header = document.createElement('h1');
@@ -8,7 +9,7 @@ export function contactPage() {
         <small>our</small> Mail!
         <p>send us a lovely message <span>♥</span></p>
     `;
-	contactSlate.appendChild(header);
+	varModule.contactSlate.appendChild(header);
 
 	const contactBody = document.createElement('form');
 	contactBody.innerHTML = `
@@ -20,21 +21,23 @@ export function contactPage() {
         <textarea cols="50" rows="5" placeholder="leave a message:*"></textarea><br/>
         <button type="submit" value="Send">Send</button>
     `;
-	contactSlate.appendChild(contactBody);
+	varModule.contactSlate.appendChild(contactBody);
 
-	mainDiv.appendChild(contactSlate);
+	mainDiv.appendChild(varModule.contactSlate);
 }
 
 export function contactEventListeners() {
 	const contactBtn = document.getElementById('contact');
 	contactBtn.addEventListener('click', () => {
-		contactSlate.classList.forEach((c) => {
+		varModule.contactSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				contactSlate.classList.remove('blank');
+				varModule.contactSlate.classList.remove('blank');
+				varModule.homeSlate.classList.add('blank');
+				varModule.aboutSlate.classList.add('blank');
+				varModule.menuSlate.classList.add('blank');
 				contactBtn.classList.add('active');
 			} else {
-				contactSlate.classList.add('blank');
-				contactBtn.classList.remove('active');
+				varModule.contactSlate.classList.add('blank');
 			}
 		});
 	});

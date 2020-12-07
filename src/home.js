@@ -1,6 +1,7 @@
+import * as varModule from './var';
+
 const mainDiv = document.getElementById('content');
-const homeSlate = document.createElement('div');
-homeSlate.classList = 'homeSlate blank';
+
 
 export function navigation() {
 	const navList = document.createElement('ul');
@@ -16,20 +17,22 @@ export function navigation() {
 export function homePage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>welcome</small> To Our Restaurant!';
-	homeSlate.appendChild(header);
-	mainDiv.appendChild(homeSlate);
+	varModule.homeSlate.appendChild(header);
+	mainDiv.appendChild(varModule.homeSlate);
 }
 
 export function homeEventListeners() {
 	const homeBtn = document.getElementById('home');
 	homeBtn.addEventListener('click', () => {
-		homeSlate.classList.forEach((c) => {
+		varModule.homeSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				homeSlate.classList.remove('blank');
+				varModule.homeSlate.classList.remove('blank');
+				varModule.menuSlate.classList.add('blank');
+				varModule.aboutSlate.classList.add('blank');
+				varModule.contactSlate.classList.add('blank');
 				homeBtn.classList.add('active');
 			} else {
-				homeSlate.classList.add('blank');
-				homeBtn.classList.remove('active');
+				varModule.homeSlate.classList.add('blank');
 			}
 		});
 	});

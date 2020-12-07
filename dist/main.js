@@ -13,14 +13,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "aboutPage": () => /* binding */ aboutPage,
 /* harmony export */   "aboutEventListeners": () => /* binding */ aboutEventListeners
 /* harmony export */ });
+/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./var */ "./src/var.js");
+
+
 const mainDiv = document.getElementById('content');
-const aboutSlate = document.createElement('div');
-aboutSlate.classList = 'aboutSlate blank';
+
 
 function aboutPage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>our</small> Story!';
-	aboutSlate.appendChild(header);
+	_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.appendChild(header);
 
 	const aboutBody = document.createElement('p');
 	aboutBody.innerHTML = `
@@ -29,21 +31,23 @@ function aboutPage() {
         you make, specially if it was a positive one. So! Give us your support by coming to visit our place, we can't wait to hear your opinion!
         <span>♥</span>
     `;
-	aboutSlate.appendChild(aboutBody);
+	_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.appendChild(aboutBody);
 
-	mainDiv.appendChild(aboutSlate);
+	mainDiv.appendChild(_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate);
 }
 
 function aboutEventListeners() {
 	const aboutBtn = document.getElementById('about');
 	aboutBtn.addEventListener('click', () => {
-		aboutSlate.classList.forEach((c) => {
+		_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				aboutSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.add('blank');
 				aboutBtn.classList.add('active');
 			} else {
-				aboutSlate.classList.add('blank');
-				aboutBtn.classList.remove('active');
+				_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.add('blank');
 			}
 		});
 	});
@@ -62,9 +66,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "contactPage": () => /* binding */ contactPage,
 /* harmony export */   "contactEventListeners": () => /* binding */ contactEventListeners
 /* harmony export */ });
+/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./var */ "./src/var.js");
+
+
 const mainDiv = document.getElementById('content');
-const contactSlate = document.createElement('div');
-contactSlate.classList = 'contactSlate blank';
+
 
 function contactPage() {
 	const header = document.createElement('h1');
@@ -72,7 +78,7 @@ function contactPage() {
         <small>our</small> Mail!
         <p>send us a lovely message <span>♥</span></p>
     `;
-	contactSlate.appendChild(header);
+	_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.appendChild(header);
 
 	const contactBody = document.createElement('form');
 	contactBody.innerHTML = `
@@ -84,21 +90,23 @@ function contactPage() {
         <textarea cols="50" rows="5" placeholder="leave a message:*"></textarea><br/>
         <button type="submit" value="Send">Send</button>
     `;
-	contactSlate.appendChild(contactBody);
+	_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.appendChild(contactBody);
 
-	mainDiv.appendChild(contactSlate);
+	mainDiv.appendChild(_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate);
 }
 
 function contactEventListeners() {
 	const contactBtn = document.getElementById('contact');
 	contactBtn.addEventListener('click', () => {
-		contactSlate.classList.forEach((c) => {
+		_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				contactSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.add('blank');
 				contactBtn.classList.add('active');
 			} else {
-				contactSlate.classList.add('blank');
-				contactBtn.classList.remove('active');
+				_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.add('blank');
 			}
 		});
 	});
@@ -118,9 +126,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "homePage": () => /* binding */ homePage,
 /* harmony export */   "homeEventListeners": () => /* binding */ homeEventListeners
 /* harmony export */ });
+/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./var */ "./src/var.js");
+
+
 const mainDiv = document.getElementById('content');
-const homeSlate = document.createElement('div');
-homeSlate.classList = 'homeSlate blank';
+
 
 function navigation() {
 	const navList = document.createElement('ul');
@@ -136,20 +146,22 @@ function navigation() {
 function homePage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>welcome</small> To Our Restaurant!';
-	homeSlate.appendChild(header);
-	mainDiv.appendChild(homeSlate);
+	_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.appendChild(header);
+	mainDiv.appendChild(_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate);
 }
 
 function homeEventListeners() {
 	const homeBtn = document.getElementById('home');
 	homeBtn.addEventListener('click', () => {
-		homeSlate.classList.forEach((c) => {
+		_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				homeSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.add('blank');
 				homeBtn.classList.add('active');
 			} else {
-				homeSlate.classList.add('blank');
-				homeBtn.classList.remove('active');
+				_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.add('blank');
 			}
 		});
 	});
@@ -198,14 +210,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "menuPage": () => /* binding */ menuPage,
 /* harmony export */   "menuEventListeners": () => /* binding */ menuEventListeners
 /* harmony export */ });
+/* harmony import */ var _var__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./var */ "./src/var.js");
+
+
 const mainDiv = document.getElementById('content');
-const menuSlate = document.createElement('div');
-menuSlate.classList = 'menuSlate blank';
 
 function menuPage() {
 	const header = document.createElement('h1');
 	header.innerHTML = '<small>our</small> Menu!';
-	menuSlate.appendChild(header);
+	_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.appendChild(header);
 
 
 	const menuBody = document.createElement('table');
@@ -239,25 +252,54 @@ function menuPage() {
             <td>$55</td>
         </tr>
     `;
-	menuSlate.appendChild(menuBody);
+	_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.appendChild(menuBody);
 
-	mainDiv.appendChild(menuSlate);
+	mainDiv.appendChild(_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate);
 }
 
 function menuEventListeners() {
 	const menuBtn = document.getElementById('menu');
 	menuBtn.addEventListener('click', () => {
-		menuSlate.classList.forEach((c) => {
+		_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.forEach((c) => {
 			if (c === 'blank') {
-				menuSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.remove('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.aboutSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.contactSlate.classList.add('blank');
+				_var__WEBPACK_IMPORTED_MODULE_0__.homeSlate.classList.add('blank');
 				menuBtn.classList.add('active');
 			} else {
-				menuSlate.classList.add('blank');
-				menuBtn.classList.remove('active');
+				_var__WEBPACK_IMPORTED_MODULE_0__.menuSlate.classList.add('blank');
 			}
 		});
 	});
 }
+
+/***/ }),
+
+/***/ "./src/var.js":
+/*!********************!*
+  !*** ./src/var.js ***!
+  \********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "menuSlate": () => /* binding */ menuSlate,
+/* harmony export */   "aboutSlate": () => /* binding */ aboutSlate,
+/* harmony export */   "homeSlate": () => /* binding */ homeSlate,
+/* harmony export */   "contactSlate": () => /* binding */ contactSlate
+/* harmony export */ });
+const menuSlate = document.createElement('div');
+menuSlate.classList = 'menuSlate blank';
+
+const aboutSlate = document.createElement('div');
+aboutSlate.classList = 'aboutSlate blank';
+
+const homeSlate = document.createElement('div');
+homeSlate.classList = 'homeSlate blank';
+
+const contactSlate = document.createElement('div');
+contactSlate.classList = 'contactSlate blank';
 
 /***/ })
 
