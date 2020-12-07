@@ -5,10 +5,10 @@ home_page.classList = "home_page blank"
 export function navigation() {
     const navList = document.createElement('ul')
     navList.innerHTML = `
-        <li id="home"><a href="#home">Home</a></li>
-        <li id="menu"><a href="#menu">Menu</a></li>
-        <li id="about"><a href="#about">About</a></li>
-        <li id="contact"><a href="#contact">Contact</a></li>
+        <li><a id="home" href="#home">Home</a></li>
+        <li><a id="menu" href="#menu">Menu</a></li>
+        <li><a id="about" href="#about">About</a></li>
+        <li><a id="contact" href="#contact">Contact</a></li>
     `
     mainDiv.appendChild(navList)
 }
@@ -26,8 +26,10 @@ export function homeEventListeners() {
         home_page.classList.forEach((c) => {
             if(c == 'blank') {
                 home_page.classList.remove('blank')
+                homeBtn.classList.add('active')
             } else {
                 home_page.classList.add('blank')
+                homeBtn.classList.remove('active')
             }
         })
     })

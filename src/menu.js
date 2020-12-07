@@ -50,8 +50,10 @@ export function menuEventListeners() {
         menu_page.classList.forEach((c) => {
             if(c == 'blank') {
                 menu_page.classList.remove('blank')
+                menuBtn.classList.add('active')
             } else {
                 menu_page.classList.add('blank')
+                menuBtn.classList.remove('active')
             }
         })
     })

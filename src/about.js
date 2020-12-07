@@ -25,8 +25,10 @@ export function aboutEventListeners() {
         about_page.classList.forEach((c) => {
             if(c == 'blank') {
                 about_page.classList.remove('blank')
+                aboutBtn.classList.add('active')
             } else {
                 about_page.classList.add('blank')
+                aboutBtn.classList.remove('active')
             }
         })
     })

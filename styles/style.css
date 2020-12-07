@@ -65,6 +65,14 @@ a:hover::before {
     left: 0;
 }
 
+.active::before {
+    left: 0;
+}
+
+.active {
+    color: gold;
+}
+
 .blank {
     display: none;
 }
@@ -101,4 +109,40 @@ p {
 
 span {
     color: goldenrod;
+}
+
+input {
+    width: 60%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid goldenrod;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #444;
+}
+
+textarea {
+    width: 60%;
+    border: 2px solid goldenrod;
+    outline: none;
+    margin-top: 1rem;
+}
+
+textarea::placeholder {
+    padding: 0.5rem;
+}
+
+button {
+    width: 30%;
+    background-color: goldenrod;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    margin-top: 1rem;
 }

@@ -40,8 +40,65 @@ function aboutEventListeners() {
         about_page.classList.forEach((c) => {
             if(c == 'blank') {
                 about_page.classList.remove('blank')
+                aboutBtn.classList.add('active')
             } else {
                 about_page.classList.add('blank')
+                aboutBtn.classList.remove('active')
+            }
+        })
+    })
+}
+
+/***/ }),
+
+/***/ "./src/contact.js":
+/*!************************!*
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "contactPage": () => /* binding */ contactPage,
+/* harmony export */   "contactEventListeners": () => /* binding */ contactEventListeners
+/* harmony export */ });
+const mainDiv = document.getElementById('content')
+const contact_page = document.createElement('div')
+contact_page.classList = "contact_page blank"
+
+function contactPage() {
+    const header = document.createElement('h1')
+    header.innerHTML = `
+        <small>our</small> Mail!
+        <p>send us a lovely message <span>♥</span></p>
+    `
+    contact_page.appendChild(header)
+
+    const contactBody = document.createElement('form')
+    contactBody.innerHTML = `
+        <input type="text" placeholder="Name:*"><br/>
+        <input type="text" placeholder="Email:*"><br/>
+        <input type="number" placeholder="Numer of Family Members:*"><br/>
+        <input type="text" placeholder="Phone Number:*"><br/>
+        <input type="date"><br/>
+        <textarea cols="50" rows="5" placeholder="leave a message:*"></textarea><br/>
+        <button type="submit" value="Send">Send</button>
+    `
+    contact_page.appendChild(contactBody)
+
+    mainDiv.appendChild(contact_page)
+}
+
+function contactEventListeners() {
+    const contactBtn = document.getElementById('contact')
+    contactBtn.addEventListener('click', () => {
+        contact_page.classList.forEach((c) => {
+            if(c == 'blank') {
+                contact_page.classList.remove('blank')
+                contactBtn.classList.add('active')
+            } else {
+                contact_page.classList.add('blank')
+                contactBtn.classList.remove('active')
             }
         })
     })
@@ -68,10 +125,10 @@ home_page.classList = "home_page blank"
 function navigation() {
     const navList = document.createElement('ul')
     navList.innerHTML = `
-        <li id="home"><a href="#home">Home</a></li>
-        <li id="menu"><a href="#menu">Menu</a></li>
-        <li id="about"><a href="#about">About</a></li>
-        <li id="contact"><a href="#contact">Contact</a></li>
+        <li><a id="home" href="#home">Home</a></li>
+        <li><a id="menu" href="#menu">Menu</a></li>
+        <li><a id="about" href="#about">About</a></li>
+        <li><a id="contact" href="#contact">Contact</a></li>
     `
     mainDiv.appendChild(navList)
 }
@@ -89,8 +146,10 @@ function homeEventListeners() {
         home_page.classList.forEach((c) => {
             if(c == 'blank') {
                 home_page.classList.remove('blank')
+                homeBtn.classList.add('active')
             } else {
                 home_page.classList.add('blank')
+                homeBtn.classList.remove('active')
             }
         })
     })
@@ -105,23 +164,27 @@ function homeEventListeners() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ "./src/home.js");
-/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
-/* harmony import */ var _about_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about.js */ "./src/about.js");
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home */ "./src/home.js");
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu */ "./src/menu.js");
+/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about */ "./src/about.js");
+/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact */ "./src/contact.js");
 console.log('Let us GO!');
 
 
 
 
-_home_js__WEBPACK_IMPORTED_MODULE_0__.navigation()
 
-_home_js__WEBPACK_IMPORTED_MODULE_0__.homePage()
-_menu_js__WEBPACK_IMPORTED_MODULE_1__.menuPage()
-_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutPage()
+_home__WEBPACK_IMPORTED_MODULE_0__.navigation()
 
-_home_js__WEBPACK_IMPORTED_MODULE_0__.homeEventListeners()
-_menu_js__WEBPACK_IMPORTED_MODULE_1__.menuEventListeners()
-_about_js__WEBPACK_IMPORTED_MODULE_2__.aboutEventListeners()
+_home__WEBPACK_IMPORTED_MODULE_0__.homePage()
+_menu__WEBPACK_IMPORTED_MODULE_1__.menuPage()
+_about__WEBPACK_IMPORTED_MODULE_2__.aboutPage()
+_contact__WEBPACK_IMPORTED_MODULE_3__.contactPage()
+
+_home__WEBPACK_IMPORTED_MODULE_0__.homeEventListeners()
+_menu__WEBPACK_IMPORTED_MODULE_1__.menuEventListeners()
+_about__WEBPACK_IMPORTED_MODULE_2__.aboutEventListeners()
+_contact__WEBPACK_IMPORTED_MODULE_3__.contactEventListeners()
 
 /***/ }),
 
@@ -188,8 +251,10 @@ function menuEventListeners() {
         menu_page.classList.forEach((c) => {
             if(c == 'blank') {
                 menu_page.classList.remove('blank')
+                menuBtn.classList.add('active')
             } else {
                 menu_page.classList.add('blank')
+                menuBtn.classList.remove('active')
             }
         })
     })
