@@ -1,5 +1,12 @@
 # Restaurant
 This is a restaurant application built with Javascript ES6 and Webpack
+
+![screenshot](./images/Screenshot.png)
+
+## Live Link
+
+- https://rawcdn.githack.com/MahmoudBakr23/Restaurant/973c338d66caccb10078cbd5a5e720e30c4912f5/dist/index.html
+
 ## Built with
 
 - Pure JavaScript
