@@ -1,148 +1,148 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    background-color: #3a3d72;
-    color: #e0e0e0
+  background-color: #3a3d72;
+  color: #e0e0e0;
 }
 
 #content {
-    text-align: center;
-    margin: 0 auto;
-    padding: 2rem;
-    color: #333;
-    font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  font-family: sans-serif;
 }
 
 .home_page {
-    transition: 2s;
+  transition: 2s;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 li {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 small {
-    color: #e0e0e0;
-    font-weight: 100;
+  color: #e0e0e0;
+  font-weight: 100;
 }
 
 h1 {
-    margin: 5rem 0;
-    color: goldenrod;
+  margin: 5rem 0;
+  color: goldenrod;
 }
 
 a {
-    text-decoration: none;
-    color: #e0e0e0;
-    font-weight: 600;
-    position: relative;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 600;
+  position: relative;
 }
 
 a::before {
-    content: '';
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    background-color: goldenrod;
-    top: 20px;
-    left: -20%;
-    transition: 0.5s;
-    overflow: hidden;
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  background-color: goldenrod;
+  top: 20px;
+  left: -20%;
+  transition: 0.5s;
+  overflow: hidden;
 }
 
 a:hover::before {
-    left: 0;
+  left: 0;
 }
 
 .active::before {
-    left: 0;
+  left: 0;
 }
 
 .active {
-    color: gold;
+  color: gold;
 }
 
 .blank {
-    display: none;
+  display: none;
 }
 
 table {
-    color: #e0e0e0;
-    margin: 0 auto;
-    width: 100%;
-    background-color: #444;
-    padding: 2rem 1rem;
+  color: #e0e0e0;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #444;
+  padding: 2rem 1rem;
 }
 
 th {
-    color: goldenrod;
-    padding-bottom: 1rem;
+  color: goldenrod;
+  padding-bottom: 1rem;
 }
 
 td {
-    padding: 1rem;
-    border-left: 1px solid gold;
+  padding: 1rem;
+  border-left: 1px solid gold;
 }
 
 td:hover {
-    background-color: gray;
-    cursor: pointer;
+  background-color: gray;
+  cursor: pointer;
 }
 
 p {
-    color: #e0e0e0;
-    font-size: 1.3rem;
-    line-height: 30px;
-    font-weight: 100;
+  color: #e0e0e0;
+  font-size: 1.3rem;
+  line-height: 30px;
+  font-weight: 100;
 }
 
 span {
-    color: goldenrod;
+  color: goldenrod;
 }
 
 input {
-    width: 60%;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 2px solid goldenrod;
-    outline: none;
+  width: 60%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 2px solid goldenrod;
+  outline: none;
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #444;
+  color: #444;
 }
 
 textarea {
-    width: 60%;
-    border: 2px solid goldenrod;
-    outline: none;
-    margin-top: 1rem;
+  width: 60%;
+  border: 2px solid goldenrod;
+  outline: none;
+  margin-top: 1rem;
 }
 
 textarea::placeholder {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 button {
-    width: 30%;
-    background-color: goldenrod;
-    color: #333;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 1rem;
-    border: 1px solid #e0e0e0;
-    outline: none;
-    margin-top: 1rem;
+  width: 30%;
+  background-color: goldenrod;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  margin-top: 1rem;
 }
