@@ -14,7 +14,9 @@
     "no-shadow": "off",
     "no-param-reassign": "off",
     "eol-last": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "indent": [2, "tab"],
+    "no-tabs": 0
   },
   "ignorePatterns": [
     "dist/",

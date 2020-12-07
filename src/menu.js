@@ -1,15 +1,15 @@
-const mainDiv = document.getElementById('content')
-const menu_page = document.createElement('div')
-menu_page.classList = "menu_page blank"
+const mainDiv = document.getElementById('content');
+const menuSlate = document.createElement('div');
+menuSlate.classList = 'menuSlate blank';
 
 export function menuPage() {
-    const header = document.createElement('h1')
-    header.innerHTML = `<small>our</small> Menu!`
-    menu_page.appendChild(header)
-    
+	const header = document.createElement('h1');
+	header.innerHTML = '<small>our</small> Menu!';
+	menuSlate.appendChild(header);
 
-    const menuBody = document.createElement('table')
-    menuBody.innerHTML = `
+
+	const menuBody = document.createElement('table');
+	menuBody.innerHTML = `
         <tr>
             <th>Sort</th>
             <th>X Small</th>
@@ -38,23 +38,23 @@ export function menuPage() {
             <td>$45</td>
             <td>$55</td>
         </tr>
-    `
-    menu_page.appendChild(menuBody)
+    `;
+	menuSlate.appendChild(menuBody);
 
-    mainDiv.appendChild(menu_page)
+	mainDiv.appendChild(menuSlate);
 }
 
 export function menuEventListeners() {
-    const menuBtn = document.getElementById('menu')
-    menuBtn.addEventListener('click', () => {
-        menu_page.classList.forEach((c) => {
-            if(c == 'blank') {
-                menu_page.classList.remove('blank')
-                menuBtn.classList.add('active')
-            } else {
-                menu_page.classList.add('blank')
-                menuBtn.classList.remove('active')
-            }
-        })
-    })
+	const menuBtn = document.getElementById('menu');
+	menuBtn.addEventListener('click', () => {
+		menuSlate.classList.forEach((c) => {
+			if (c === 'blank') {
+				menuSlate.classList.remove('blank');
+				menuBtn.classList.add('active');
+			} else {
+				menuSlate.classList.add('blank');
+				menuBtn.classList.remove('active');
+			}
+		});
+	});
 }
